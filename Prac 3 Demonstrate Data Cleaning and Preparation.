@@ -1,0 +1,29 @@
+import pandas as pd
+data={'name':['jack','jay','tom','alice','sally'],'age':[None,34,32,None,33],'salary':[40000,None,600000,
+46777,80000]}	
+df=pd.DataFrame(data)
+print("Missing Values:")
+ 
+print(df.isnull())
+ 
+df_cleaned=df.dropna()
+print("\nDataframe after droppping rows with the missing values:")
+print(df_cleaned)
+ 
+df_filled=df.fillna({'age':df['age'].mean(),'salary':df['salary'].median()})
+print("\nDatFrame after fillling missing values:")
+print(df_filled)
+ 
+print("\nDupilicated rows:")
+print(df.duplicated())
+ 
+df_no_duplicates=df.drop_duplicates()
+print("\nDataframe after removing duplicates:")
+print(df_no_duplicates)
+ 
+df_renamed=df.rename(columns={'name':'full name'})
+print(df_renamed)
+ 
+df_reordered=df[['salary','age','name']]
+print(df_reordered)
+ 
