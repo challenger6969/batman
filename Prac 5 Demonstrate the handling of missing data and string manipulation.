@@ -1,1 +1,26 @@
+In [1] : val = ‘a,b, guido’
+In [2] : val.split(‘,’)
+ 
+In [3] : pieces = [x.strip() for x in val.split(‘,’)]
+In [4] : pieces
+ 
+In [5] : first, second, third = pieces
+In [6] : first :: + second + :: + third
+ 
+In [7] : ‘::’.join(pieces)
+ 
+In [8] : ‘guido’in val
+ 
+In [9] : val.index(‘,’)
+ 
+In [10] : val.find(‘:’)
+ 
+In [11] : val.index(‘:’)
+ 
+In [12] : val.count(‘,’)
+ 
+In [13] : val.replace(‘,’, ‘::’)
+ 
+In [14] : val.replace(‘,’, “”)
+ 
 
