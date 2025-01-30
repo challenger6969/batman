@@ -1,0 +1,13 @@
+import requests
+from bs4 import BeautifulSoup
+
+api_url = "https://api.github.com"
+
+response = requests.get(api_url)
+
+if response.status_code == 200:
+    data = response.json()
+    print("Data from API:")
+    print(data)
+else:
+    print("Failed to fetch data from the API")
